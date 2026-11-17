@@ -8,8 +8,8 @@ x = random(0, 400)
 
 function draw() {
 background(50, 0, 80)
-star(x, y)
-for ( let i = 0; mouseClicked; i + 1) {
+star(50, 50)
+for ( let i = 0; i < xCoordinates.length; i + 1) {
     star(xCoordinates, yCoordinates)
 }
 
