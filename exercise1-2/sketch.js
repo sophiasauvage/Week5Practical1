@@ -1,5 +1,5 @@
 let xCoordinates = [100, 200, 300] 
-let yCoordinates = 0
+let yCoordinates = [300, 200, 350] 
 
 function setup() {
 createCanvas(400, 400)
@@ -8,14 +8,15 @@ x = random(0, 400)
 
 function draw() {
 background(50, 0, 80)
-star(50, 50)
-for ( let i = 0; i < xCoordinates.length; i + 1) {
-    star(xCoordinates, yCoordinates)
-}
+
+for ( let i = 0; i < xCoordinates.length; i += 1) { //remember xCoordinates.length
+    star(xCoordinates[i], yCoordinates[i])
+   yCoordinates[i]  += 1 //remember square brackets around i
+} 
 
 //if (mouseIsPressed){
    //  star(x, y)
-   //  y += 10
+
 //}
 }
 
@@ -37,8 +38,7 @@ function star(x, y ) {
 }
 
 function mouseClicked(){
-//if (true){
-   // star
-  //y +=2
-//}
+xCoordinates.push(mouseX)
+yCoordinates.push(mouseY)
+  
 }
